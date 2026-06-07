@@ -41,3 +41,5 @@ tmp/
 temp/
 scratch/
 trash/
+
+!runs/example_run_log.md

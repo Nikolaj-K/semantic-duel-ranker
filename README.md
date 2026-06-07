@@ -366,4 +366,3 @@ second, and estimated remaining time.
   output.
 - Provider output is treated as untrusted and validated against the exact
   compared item IDs before becoming ranking evidence.
-- See [`PUBLICATION_AUDIT.md`](PUBLICATION_AUDIT.md) before publishing.
