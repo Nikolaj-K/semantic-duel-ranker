@@ -1,0 +1,43 @@
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local configuration and secrets.
+config.toml
+config.local.toml
+*.local.toml
+.env
+.env.*
+!.env.example
+
+# Optional downloaded source datasets are local inputs, not project fixtures.
+test_data_full/
+data/raw/
+downloads/
+
+# Run directories can contain prompts, model responses, and large matrices.
+runs/*
+!runs/.gitkeep
+
+# Terminal captures and other generated diagnostics.
+*.log
+logs/
+
+# Temporary local work.
+tmp/
+temp/
+scratch/
+trash/

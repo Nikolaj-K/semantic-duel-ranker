@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-duel-ranker"
+version = "0.1.0"
+description = "Local-first active preference ranking for short text items."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "requests>=2.32",
+  "rich>=13.9",
+  "scipy>=1.14",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=25.0",
+  "pytest>=8.0",
+  "ruff>=0.11",
+]
+
+[project.scripts]
+semantic-duel-ranker = "semantic_duel_ranker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["semantic_duel_ranker*"]
+
+[tool.setuptools.package-data]
+semantic_duel_ranker = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311", "py312", "py313"]
+extend-exclude = "test_data|test_data_full|runs"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = ["test_data", "test_data_full", "runs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["semantic_duel_ranker"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

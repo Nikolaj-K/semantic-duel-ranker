@@ -1,0 +1,39 @@
+# Copy this file to config.toml and adjust values for your machine.
+# Relative paths are resolved from the directory containing this file.
+
+[rank]
+input_path = "test_data/sample_10_rank_items.jsonl"
+loader = "generic"
+provider = "mock"
+top_k = 5
+budget = 10
+tuple_size = 2
+objective = "Rank these items by useful engagement, informativeness, clarity, originality, and topical relevance."
+seed = 42
+use_metadata_prior = true
+prior_strength = 0.35
+regularization = 1.0
+matrix_window = 20
+snapshot_every = 1
+preview_tweets = 3
+
+[lmstudio]
+base_url = "http://127.0.0.1:1234/v1"
+model = "replace-with-a-model-id-from-list-models"
+temperature = 0.1
+max_output_tokens = 1200
+response_format = "auto"
+retries = 1
+timeout_seconds = 900
+allow_non_loopback = false
+
+# LM Studio accepts the placeholder "lm-studio" locally. For a real credential,
+# prefer the SEMANTIC_DUEL_LMSTUDIO_API_KEY environment variable so the value
+# never enters config files or generated run artifacts.
+api_key = "lm-studio"
+
+[mock]
+noise = 0.35
+
+[output]
+run_root = "runs"
