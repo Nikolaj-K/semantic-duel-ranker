@@ -193,7 +193,8 @@ to Git.
 
 ### Optional Raw Tweet Export
 
-The 20 MB source export is not required for ranking, tests, or demonstrations.
+I got example public tweets from [kaggle](https://www.kaggle.com/datasets/fastcurious/twitter-new-dataset-2024-march-data?resource=download) but didn't upload them here, in a `test_data_full` dir, as the json is 20 MB large.
+The source export is not required for ranking, tests, or demonstrations.
 If retained locally, place it under `test_data_full/`, which is ignored by Git.
 It is only needed to audit the original source or regenerate the 10-item
 fixture:
